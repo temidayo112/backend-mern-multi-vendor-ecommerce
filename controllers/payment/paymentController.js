@@ -7,7 +7,7 @@ const withdrowRequest = require('../../models/withdrowRequest')
 const {v4: uuidv4} = require('uuid')
 const { responseReturn } = require('../../utiles/response')
 const { mongo: {ObjectId}} = require('mongoose')
-const stripe = require('stripe')('sk_test_51RW3M8COwdTN7xVnDlOH7XblM8hqgYhx66LspLePhvcbUK5ywgSmZN85f3WHqvEnksIIVxK636B1U4l09zfn9Hq300sgReDogx')
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 
 class paymentController{
